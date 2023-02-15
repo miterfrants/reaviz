@@ -80,7 +80,6 @@ Chart types include:
   - Exploded
   - Donut Chart
 - Sankey chart
-- Hive Plot
 - Gauge
   - Radial
   - Linear
@@ -96,6 +95,7 @@ Chart types include:
   - Fixed Euler
 - Bubble Chart
 - Treemap
+- Bar List
 
 Additional features:
 

@@ -3,6 +3,8 @@ import { Dimensions, Margins, getDimension } from '../utils/dimensions';
 import useDimensions from 'react-cool-dimensions';
 import { useId } from 'rdk';
 import { LinearAxisDimensionChanged } from '../Axis';
+import classNames from 'classnames';
+import css from './ChartContainer.module.css';
 
 export interface ChartProps {
   /**
@@ -101,8 +103,8 @@ export const ChartContainer: FC<ChartContainerProps> = ({
   const curId = useId(id);
   const [xAxisSized, setXAxisSized] = useState<boolean>(false);
   const [yAxisSized, setYAxisSized] = useState<boolean>(false);
-  const [xOffset, setYOffset] = useState<number>(0);
-  const [yOffset, setXOffset] = useState<number>(0);
+  const [xOffset, setXOffset] = useState<number>(0);
+  const [yOffset, setYOffset] = useState<number>(0);
   const { observe, width, height } = useDimensions<HTMLDivElement>();
 
   const chartSized = useMemo(() => {
@@ -185,7 +187,7 @@ export const ChartContainer: FC<ChartContainerProps> = ({
     <div
       ref={observe}
       style={{ height: styleHeight, width: styleWidth }}
-      className={containerClassName}
+      className={classNames(containerClassName, css.container)}
     >
       {height > 0 && width > 0 && (
         <svg width={width} height={height} className={className} style={style}>

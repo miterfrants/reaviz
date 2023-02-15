@@ -1,3 +1,102 @@
+# 14.0.1/14.0.2 - 1/31/23
+- [chore] upgrade reablocks
+
+# 14.0.0 - 1/31/23
+- [BREAKING] removed hive plot
+- [BREAKING] rename CSS variables to align with other standards ( deprecated but will be removed in next major release )
+- [chore] migrate from realayers to reablocks
+- [chore] upgraded framer-motion to v8
+
+To migrate to 14.x, you will need to rename your CSS variables. Here is
+what they look like today:
+
+```css
+--color-background: rgb(51, 51, 51);
+--color-on-background:#fff;
+
+--color-tooltip:rgba(0,5,11,0.9);
+--color-on-tooltip: #fff;
+
+--color-handle-fill: #2c343a;
+--color-handle-stroke: #67c2e4;
+--color-handle-drag-fill: transparent;
+--color-handle-dots: #67c2e4;
+--color-handle-line: #67c2e4;
+```
+
+Here is what they need to be renamed to:
+
+```css
+--tooltip-background: rgba(0,5,11,0.9);
+--tooltip-color: #fff;
+--tooltip-border-radius: 5px;
+--tooltip-spacing: 5px;
+
+--chart-background: rgb(51, 51, 51);
+--chart-color: #fff;
+
+--chart-handle-fill: #2c343a;
+--chart-handle-stroke: #67c2e4;
+--chart-handle-drag-fill: transparent;
+--chart-handle-dots: #67c2e4;
+--chart-handle-line: #67c2e4;
+```
+
+# 13.3.2 - 11/30/22
+- [fix] ignore onMoveStart and onMove if brush is disabled #100
+
+# 13.3.1 - 11/30/22
+- [fix] fix disabled brush crashing when clicking on bar #99
+
+# 13.3.0 - 11/21/22
+- [chore] upgrade framer-motion
+- [chore] upgrade rdk
+- [chore] upgrade realayers
+
+# 13.2.1 - 11/15/22
+- [feature] bar list label improvements and formatting
+
+# 13.2.0 - 11/14/22
+- [feature] bar list component
+
+# 13.1.14 - 11/08/22
+- [improvement] add ability to pass natural-earth projection to map #90
+
+# 13.1.13 - 10/14/22
+- [fix] Disabled based on aggregated data #93
+- [fix] fix storybook mdxjs failing
+
+# 13.1.12 - 10/11/22
+- [fix] revert esm fix #89 
+- [chore] upgrade storybook
+
+# 13.1.11 - 10/11/22
+- [fix] Fix esm output #89
+- [fix] improve wrapText() and added a treemap example with long label texts #91
+
+# 13.1.10 - 9/29/22
+- [fix] Fix esm import #87
+- [chore] upgrade rdk/realayers
+
+# 13.1.9 - 9/21/22
+- [fix] Fix CalendarHeatmap series prop not passed into Heatmap #85
+
+# 13.1.8 - 8/30/22
+- [fix] Fix the x and y offset for chartContainer #84 
+
+# 13.1.7 - 8/28/22
+- [fix] Fix bar chart brush on categorical scales #83
+
+# 13.1.6 - 8/1/22
+- [fix] fix `BarLabel` props not partial
+- [fix] remove knobs from heatmap stories due to errors
+- [fix] fix rx/ry not being passed to heatmap cells
+- [style] update padding from 0.1 to 0.3 on heatmaps
+- [chore] upgrade realayers
+
+# 13.1.5 - 7/20/22
+- [fix] fix transform-matrix nested type build error #79
+
 # 13.1.4- 6/15/22
 - [improvement] add ability to pass fill to radial gauge arc
 - [improvement] make radial gauge arc outer component for easier use
